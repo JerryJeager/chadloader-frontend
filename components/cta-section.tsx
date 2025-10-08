@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, ArrowRight } from "lucide-react";
+import { Download, ArrowRight, Github } from "lucide-react";
 
 export function CtaSection() {
   return (
@@ -43,17 +43,30 @@ export function CtaSection() {
 
       {/* Footer */}
       <footer className="mt-32 pt-8 border-t border-border">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-2xl font-black">
-              Chad<span className="text-primary">Loader</span>
-            </div>
-            <div className="text-sm text-muted-foreground">
-              © 2025 ChadLoader. Built by Chads, for Chads.
-            </div>
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-2xl font-black">
+            Chad<span className="text-primary">Loader</span>
+          </div>
+
+          <div className="flex items-center gap-3 text-sm text-muted-foreground">
+            <a
+              href="https://github.com/JerryJeager/chadloader-app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-primary transition-colors"
+            >
+              <Github className="w-5 h-5" />
+              <span>Open Source</span>
+            </a>
           </div>
         </div>
-      </footer>
+
+        <div className="mt-4 text-center text-xs text-muted-foreground">
+          © 2025 ChadLoader — Built by Chads, for Chads.
+        </div>
+      </div>
+    </footer>
     </section>
   );
 }
