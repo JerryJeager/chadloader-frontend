@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
-import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -33,16 +32,16 @@ export function HeroSection() {
           Paste link. Hit download. Dominate.
         </p>
 
-        <Link href={"/download"} className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+        <a href={"https://github.com/JerryJeager/chadloader-app/releases/download/v1.0.0/chadloader.exe"} className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
           <Button
             size="lg"
             className="text-lg px-8 py-6 font-black bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_rgba(34,197,94,0.4)] hover:shadow-[0_0_40px_rgba(34,197,94,0.6)] transition-all"
           >
             <Download className="mr-2 h-5 w-5" />
-            Get Started Now
+            Download for Windows
           </Button>
           <p className="text-sm text-muted-foreground font-mono">// Beta Testers Stay Home</p>
-        </Link>
+        </a>
 
         {/* Stats */}
         <div className="grid grid-cols-3 pb-8 gap-8 pt-16 max-w-3xl mx-auto">

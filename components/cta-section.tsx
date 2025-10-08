@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Download, ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Download, ArrowRight } from "lucide-react";
 
 export function CtaSection() {
   return (
@@ -21,18 +20,25 @@ export function CtaSection() {
           Your content awaits.
         </p>
 
-        <Link href="/download" className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+        <a
+          href={
+            "https://github.com/JerryJeager/chadloader-app/releases/download/v1.0.0/chadloader.exe"
+          }
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
+        >
           <Button
             size="lg"
             className="text-lg px-10 py-7 font-black bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_40px_rgba(34,197,94,0.5)] hover:shadow-[0_0_50px_rgba(34,197,94,0.7)] transition-all"
           >
             <Download className="mr-2 h-6 w-6" />
-            Start Dominating Now
+            Download for Windows
             <ArrowRight className="ml-2 h-6 w-6" />
           </Button>
-        </Link>
+        </a>
 
-        <p className="text-sm text-muted-foreground font-mono pt-8">// No credit card. No signup. No excuses.</p>
+        <p className="text-sm text-muted-foreground font-mono pt-8">
+          // No credit card. No signup. No excuses.
+        </p>
       </div>
 
       {/* Footer */}
@@ -42,10 +48,12 @@ export function CtaSection() {
             <div className="text-2xl font-black">
               Chad<span className="text-primary">Loader</span>
             </div>
-            <div className="text-sm text-muted-foreground">© 2025 ChadLoader. Built by Chads, for Chads.</div>
+            <div className="text-sm text-muted-foreground">
+              © 2025 ChadLoader. Built by Chads, for Chads.
+            </div>
           </div>
         </div>
       </footer>
     </section>
-  )
+  );
 }

@@ -61,7 +61,7 @@ export default function DownloadPage() {
   }
 
   const handleDownload = (itag: number) => {
-    const downloadUrl = `https://chadloader-392515681273.us-central1.run.app/api/v1/youtube/download?url=${encodeURIComponent(url)}&itag=${itag}`
+    const downloadUrl = `http://localhost:8080/api/v1/youtube/download?url=${encodeURIComponent(url)}&itag=${itag}`
     window.open(downloadUrl, "_blank")
   }
 
